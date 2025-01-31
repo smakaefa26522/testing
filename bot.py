@@ -113,7 +113,7 @@ def run_command(message):
 
     try:
 
-        result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=10)
+        result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=20)
         output = result.stdout.strip() if result.stdout else result.stderr.strip()
 
         if not output:
